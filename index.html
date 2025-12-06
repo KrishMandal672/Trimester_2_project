@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TaskFlow Board</title>
+
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="toolbox-cont">
+    <div class="brand-section">
+      <h1 class="brand-title"><i class="fas fa-tasks"></i> TaskFlow</h1>
+    </div>
+
+    <div class="toolbox-priority-cont">
+      <span class="filter-label">Filter by Priority:</span>
+      <div class="color-filters">
+        <div class="lightpink color"></div>
+        <div class="lightgreen color"></div>
+        <div class="lightblue color"></div>
+        <div class="black color"></div>
+      </div>
+    </div>
+
+    <div class="action-btn-cont">
+      <div class="add-btn"><i class="fa-solid fa-plus"></i> Add Task</div>
+      <div class="remove-btn"><i class="fa-solid fa-trash"></i> Delete</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-cont"></div>
+
+  <!-- MODAL -->
+  <div class="modal-cont" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-header">
+      <h2>Create New Task</h2>
+      <p>Enter your task details and select a priority level</p>
+    </div>
+
+    <textarea class="textArea-cont" placeholder="Enter your task description..."></textarea>
+
+    <div class="due-date-container">
+      <label class="due-date-label">Due Date:</label>
+      <input class="due-date-input" type="date" />
+    </div>
+
+    <div class="priority-colors-container">
+      <span class="priority-label">Select Priority:</span>
+      <div class="priority-grid">
+        <div class="lightpink priority-color active" title="High Priority"><span>H</span></div>
+        <div class="lightgreen priority-color" title="Medium Priority"><span>M</span></div>
+        <div class="lightblue priority-color" title="Low Priority"><span>L</span></div>
+        <div class="black priority-color" title="Critical"><span>C</span></div>
+      </div>
+
+      <div class="modal-footer">
+        <small>Press <kbd>Shift</kbd> to create task</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- audio -->
+  <audio id="cut-sound" src="cut.mp3"></audio>
+
+  <script src="./script.js"></script>
+</body>
+</html>
